@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8"/>
+    <title>@supports</title>
+    <style>
+        @supports ( display: flex ) {
+            body {
+                display: flex;
+            }
+
+            #aside {
+                width: 210px;
+            }
+            #aside p:after{content:'123';}
+
+            #main {
+                flex: auto;
+            }
+        }
+
+        @supports not ( display: flex ) {
+            #aside {
+                float: left;
+                width: 210px;
+            }
+
+            #main {
+                overflow: hidden;
+                *zoom: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="aside">aside
+    <p title="如果你看到我则说明你目前使用的浏览器支持content属性"></p>
+</div>
+<div id="main">main</div>
+</body>
+</html>

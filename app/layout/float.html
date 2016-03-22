@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/main.css">
+    <title>float 布局</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            box-sizing: border-box;
+            height: 500px;
+        }
+        .left {
+            float: left;
+            border: 5px solid #00A000;
+            width: 20%;
+        }
+        .right {
+            float: right;
+            width: 20%;
+            border: 5px solid #0000AA;
+        }
+        .main {
+            float: left;
+            border: 5px solid #ff0043;
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+        本列是左侧
+    </div>
+    <div class="main">
+        本列是中间内容区域
+    </div>
+    <div class="right">
+        本列是右侧内容区域
+    </div>
+</body>
+</html>

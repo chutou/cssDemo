@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>position</title>
+    <style type="text/css">
+    body,
+    html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+         display: flex;
+         justify-content: center;
+         align-items: center;  
+    }
+     /*.loading{
+			position: absolute;
+			top:50%;
+			width: 300px;
+			height: 300px;
+			line-height: 300px;
+			margin-top: -150px;
+			margin-left: -150px;
+			
+			text-align: center;
+			left: 50%;
+			border: 2px solid #ff0000;
+		} */
+    
+      .loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 16px;
+        padding: 4px;
+        background-color: #000;
+        width: 300px;
+        height: 300px;
+        opacity: .8;
+        object-fit: contain;
+        box-shadow: inset 0 5px white, inset 0 -5px #bbb, inset 5px 0 #d7d7d7, inset -5px 0 #d7d7d7;
+        border-radius: 10%;
+        color: #fff;
+         }
+    
+    .loading span {
+        padding: 0 10px;
+    }
+    /*.loading {
+    	display: table;
+    	height: 100%;
+    }
+    .loading span{
+    	display: table-cell;
+    	vertical-align: middle;
+    }*/
+    </style>
+</head>
+
+<body>
+    <div class="loading">
+        <span>loading,当数据过长时就会出现一个问题,字体显示不全的问题了</span>
+    </div>
+</body>
+
+</html>

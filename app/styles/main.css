@@ -1,0 +1,712 @@
+@charset "utf-8";
+/* 重置样式 */
+* {
+  -moz-box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: none;
+  /* 禁用iPhone中Safari的字号自动调整 */
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font: 100% 'Microsoft Yahei', arial, sans-serif;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  text-align: inherit;
+}
+fieldset,
+img {
+  border: none;
+}
+iframe {
+  display: block;
+}
+abbr,
+acronym {
+  border: none;
+  font-variant: normal;
+}
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size-adjust: 0.5;
+}
+q:before,
+q:after {
+  content: '';
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+ins,
+a {
+  color: #666;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:focus,
+*:focus {
+  outline: none;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+  overflow: hidden;
+}
+.clearfix {
+  zoom: 1;
+}
+.clear {
+  clear: both;
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+.hide {
+  display: none;
+}
+.block {
+  display: block;
+}
+.fl,
+.fr {
+  display: inline;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.oh {
+  overflow: hidden;
+}
+input,
+input:focus,
+input:active {
+  user-select: text;
+}
+/* 设置HTML5元素为块 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* 设置图片视频等自适应调整 */
+img {
+  height: auto;
+  width: auto9;
+  /* ie8 */
+  -ms-interpolation-mode: bicubic;
+}
+.video embed,
+.video object,
+.video iframe {
+  width: 100%;
+  height: auto;
+}
+/**
+ +------------------------------------------------------------------------------
+ * 网站样式重写
+ +------------------------------------------------------------------------------
+ * @comefrom  zhouwenyong
+ * @subpackage  zhouwenyong
+ +------------------------------------------------------------------------------
+ */
+body {
+  color: #666;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Microsoft YaHei", "Microsoft YaHei Light", "SimSun";
+  font-size: 14px;
+}
+a {
+  outline: none;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: none;
+  color: #333;
+}
+html {
+  /*zoom:1;*/
+  line-height: 24px;
+}
+html * {
+  outline: 0;
+  /*zoom:1;*/
+}
+html button::-moz-focus-inner {
+  border-color: transparent!important;
+}
+body {
+  overflow-x: hidden;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  /*border-collapse:collapse;border-spacing:0;*/
+}
+fieldset,
+a img {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+li {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before,
+q:after {
+  content: '';
+}
+.tar {
+  text-align: right;
+}
+.color_blue {
+  color: #5d9cec;
+}
+.text-unline {
+  text-decoration: underline;
+}
+.overflow {
+  overflow: hidden;
+}
+input {
+  font-family: "微软雅黑";
+}
+/**
+ +------------------------------------------------------------------------------
+ * Public Class
+ +------------------------------------------------------------------------------
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: block;
+}
+.clear {
+  clear: both;
+  height: 0px;
+  font-size: 0px;
+  line-height: 0px;
+  overflow: hidden;
+}
+/* 清除浮动*/
+.colwrapper {
+  overflow: hidden;
+  zoom: 1 /*for ie*/;
+  margin: 5px auto;
+}
+/* 高度自适应 */
+.strong {
+  font-weight: bold;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+  text-align: right;
+}
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+.show {
+  display: block;
+  visibility: visible;
+}
+.hide {
+  display: none;
+  visibility: hidden;
+}
+.block {
+  display: block;
+}
+.inline {
+  display: inline;
+}
+.inline-block {
+  display: inline-block;
+}
+.h100 {
+  height: 100%;
+}
+.transparent {
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  /** Firefox 3.5即将原生支持opacity属性，所以本条属性只在Firefox3以下版本有效 ***/
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+}
+.break {
+  word-wrap: break-word;
+  overflow: hidden;
+  /*word-break:break-all;*/
+}
+.pt5 {
+  padding-top: 5px;
+}
+.pb5 {
+  padding-bottom: 5px;
+}
+.pl5 {
+  padding-left: 5px;
+}
+.pl10 {
+  padding-left: 10px;
+}
+.pr10 {
+  padding-right: 10px;
+}
+.pt10 {
+  padding-top: 10px;
+}
+.pb10 {
+  padding-bottom: 10px;
+}
+.pd10 {
+  padding: 10px;
+}
+.pl20 {
+  padding-left: 17px;
+}
+.pr20 {
+  padding-right: 17px;
+}
+.pt20 {
+  padding-top: 17px;
+}
+.pb20 {
+  padding-bottom: 17px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.pt8 {
+  padding-top: 8px;
+}
+.lh28 {
+  line-height: 28px;
+}
+.lh36 {
+  line-height: 36px;
+}
+.lh32 {
+  line-height: 32px;
+}
+.lh48 {
+  line-height: 48px;
+}
+.bd_1 {
+  border: 1px solid #eeeeee;
+  height: 100%;
+}
+.pd1 {
+  padding: 1px;
+  background: #fff;
+}
+.pd5 {
+  padding: 5px;
+}
+.pd20 {
+  padding: 20px 17px;
+}
+.pt15 {
+  padding-top: 15px;
+}
+.brbm {
+  border-bottom: 1px solid #dcdcdc;
+  cursor: pointer;
+}
+.brtb {
+  border-top: 1px solid #d7d7d7;
+}
+.brbd {
+  border-bottom: 1px dotted #dcdcdc;
+}
+/*底部线条*/
+.mt30 {
+  margin-top: 30px;
+}
+.mt50 {
+  margin-top: 50px;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.txde {
+  text-decoration: underline;
+}
+.ti2m {
+  text-indent: 2em;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+.ml20 {
+  margin-left: 20px;
+}
+.mr20 {
+  margin-right: 20px;
+}
+.mb30 {
+  margin-bottom: 30px;
+}
+.mg20 {
+  margin: 20px;
+}
+.mb5 {
+  margin-bottom: 5px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.mr5 {
+  margin-right: 5px;
+}
+.ml5 {
+  margin-left: 5px;
+}
+.mt36 {
+  margin-top: 36px;
+}
+.mb36 {
+  margin-bottom: 36px;
+}
+/**
+ +------------------------------------------------------------------------------
+ * FCK 兼容解决方案
+ +------------------------------------------------------------------------------
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+em {
+  font-style: italic !important;
+}
+strike {
+  text-decoration: line-through !important;
+}
+strong {
+  font-weight: bold !important;
+}
+u {
+  text-decoration: underline !important;
+}
+.strike {
+  text-decoration: line-through;
+}
+/**
+ +------------------------------------------------------------------------------
+ * 表单样式
+ +------------------------------------------------------------------------------
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+/**
+ +------------------------------------------------------------------------------
+ * 网站整体颜色总汇
+ +------------------------------------------------------------------------------
+ * @codex  颜色:使用颜色的名称或者16进制代码,如 
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+.color_333 {
+  color: #333;
+}
+.color_666 {
+  color: #666;
+}
+.color_999 {
+  color: #999;
+}
+.color_blue {
+  color: #2d84d1;
+}
+a.color_red {
+  color: #f32b41;
+}
+.color_red {
+  color: #f32b41;
+}
+.color_white {
+  color: #fff;
+}
+.color_green {
+  color: #2a8800;
+}
+.color_org {
+  color: #ff8201;
+}
+/**
+ +------------------------------------------------------------------------------
+ * 网站整字体大小
+ +------------------------------------------------------------------------------
+ * @codex   字体大小,直接使用"font+字体大小"作为名称,如
+ * @package  ORG
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+.font12px {
+  font-size: 12px;
+}
+.font14px {
+  font-size: 14px;
+}
+.font15px {
+  font-size: 15px;
+}
+.font16px {
+  font-size: 16px;
+}
+.font18px {
+  font-size: 18px;
+}
+.font24px {
+  font-size: 24px;
+}
+.font26px {
+  font-size: 26px;
+}
+.font28px {
+  font-size: 28px;
+}
+.font20px {
+  font-size: 20px;
+}
+.font32px {
+  font-size: 32px;
+}
+.font9pt {
+  font-size: 9pt;
+}
+.black {
+  color: #000;
+}
+/**
+ +------------------------------------------------------------------------------
+ * 网站背景
+ +------------------------------------------------------------------------------
+ * @codex   字体大小,直接使用bk+颜色值"作为名称,如
+ * @package  ORG
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+.bk_d4 {
+  background: #d4d4d4;
+}
+.bk_fff {
+  background: #fff;
+  height: 100%;
+}
+.br2 {
+  border: 1px solid #1282c1;
+}
+.bk_l {
+  background: #eaf9ff;
+}
+.bk_c {
+  background: #eccdfe;
+}
+.bk_f7 {
+  background: #f7f7f7;
+}
+.bk_ee {
+  background: #eee;
+}
+/**边框***/
+.brts {
+  border-top: 1px solid #e0e0e0;
+}
+.brls {
+  border-left: 1px solid #e0e0e0;
+}
+.brrs {
+  border-right: 1px solid #e0e0e0;
+}
+.brbs {
+  border-bottom: 1px solid #e0e0e0;
+}
+.brsa {
+  border: 1px solid #e0e0e0;
+}
+/*框架大小*/
+.box300 {
+  width: 300px;
+}
+body {
+  background: #fff;
+}
+body a:hover {
+  color: #333;
+}

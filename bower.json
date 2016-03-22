@@ -1,0 +1,22 @@
+{
+  "name": "web",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.3",
+    "jquery": "~2.2.2"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js",
+        "dist/fonts/*"
+      ]
+    }
+  },
+  "devDependencies": {
+    "chai": "~3.4.2",
+    "mocha": "~2.3.4"
+  }
+}

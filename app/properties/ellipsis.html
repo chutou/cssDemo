@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        div {
+            width: 200px; /*容器的基本定义*/
+            height: 200px;
+            background-color: #eee;
+        }
+        p span {
+            display: block;
+            width: 200px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        p:after {
+            content: "...";
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p><span>这是多行内容显示加省略号这是多行内容显示加省略号这是多行内容显示加省略号这是多行内容显示加省略号这是多行内容显示加省略号</span></p>
+</div>
+</body>
+</html>
