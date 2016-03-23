@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>button flex</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        .fixed-box{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0000cc;
+        }
+        .flex-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex-box a{
+            flex: 1;
+            text-align: center;
+            color: #fff;
+            padding: 10px;
+        }
+        .flex-box a:last-child{
+            background-color: #ff050c;
+            /*flex-grow: 2;*/
+        }
+    </style>
+</head>
+<body>
+<div class="fixed-box">
+    <div class="flex-box">
+        <a class="button" href="##">确定</a>
+        <a class="button" href="##">取消</a>
+    </div>
+
+</div>
+</body>
+</html>

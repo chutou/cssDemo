@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div[class~="item"] {
+            /*选择具有att属性且属性值为一用空格分隔的字词列表，其中一个等于val的E元素（包含只有一个值且该值等于val的情况）*/
+            border: 2px solid #ff0000;
+        }
+        div[class^="a"] {
+            border: 2px solid #000;
+        }
+        div[class$="c"] {
+            /*选择具有att属性且属性值为以val结尾的字符串的E元素。*/
+            border: 2px solid #000;
+        }
+        div[class*="b"] {
+            /* 选择具有att属性且属性值为包含b的字符串的E元素。*/
+            border: 2px solid #000;
+        }
+        div[class|="a"] {
+            /* 选择具有att属性且属性值为以a开头并用连接符"-"分隔的字符串的E元素，如果属性值仅为val，也将被选择。*/
+            border: 2px solid #000;
+        }
+
+    </style>
+</head>
+<body>
+<div class="item">1</div>
+<div class="item">2</div>
+<div class="item item-sub">3</div>
+<h1>选择具有att属性且属性值为以a开头的字符串的E元素。</h1>
+<div class="abc">abc</div>
+<div class="acb">acb</div>
+<div class="bac">bac</div>
+<h1>选择具有att属性且属性值为以val结尾的字符串的E元素。</h1>
+<div class="abc">abc</div>
+<div class="acb">acb</div>
+<div class="bac">bac</div>
+<h1>选择具有a属性且属性值为以val开头并用连接符"-"分隔的字符串的E元素，如果属性值仅为val，也将被选择</h1>
+<div class="a-test">a-test</div>
+<div class="b-test">b-test</div>
+<div class="c-test">c-test</div>
+</body>
+</html>
