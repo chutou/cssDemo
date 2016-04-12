@@ -1,0 +1,52 @@
+
+@img-url: '../assets/images/';
+@color-white: #ffffff;
+@color-blue: #1d91d3;
+@color-red: #f15350;
+@color-gray: #666666;
+@color-light-gray: #999999;
+@gutter: 10px;
+@border-color: #ddd;
+@bg-color: #f2f2f2;
+@bg-white-color: #ffffff;
+@bg-dark-gray: #ededed;
+@xg-font-size: 64px;
+@lg-font-size: 36px;
+@md-font-size: 24px;
+@default-font-size: 18px;
+@small-font-size: 16px;
+@xs-font-size: 14px;
+.margin(@value: @gutter,...){
+  margin: @arguments;
+}
+.margin-top(@value: @gutter){
+  margin-top: @value;
+}
+.margin-bottom(@value: @gutter){
+  margin-bottom: @value;
+}
+.margin-left(@value: @gutter){
+  margin-left: @value;
+}
+.margin-right(@value: @gutter){
+  margin-right: @value;
+}
+.padding(@value:@gutter,...){
+  padding: @arguments;
+}
+.padding-top(@value: @gutter){
+  padding-top: @value;
+}
+
+
+.testDiv{
+  font-size: 28px;
+  p{background-color: #ff0;
+      .margin(20px,50px);
+  }
+}
+
+
+
+
+//.testDiv p{ }
