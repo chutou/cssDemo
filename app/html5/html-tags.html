@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div class="arc_body">
+
+    <strong style="font-size: 16px; color: rgb(51, 51, 51); font-family: 微软雅黑; line-height: 30px;">一、新的文档类型声明(DTD)</strong><br style="color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        HTML 5的DTD声明为:</p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        &lt;!doctype html&gt;</p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        &lt;!DOCTYPE html &gt; 等也是正确的，因为HTML语法是不区分大小写的。</p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        在编写HTML5文档时，要求指定文档类型，以确保浏览器能在HTML5的标准模式下进行渲染。<br>
+        &nbsp;</p>
+    <strong style="font-size: 16px; color: rgb(51, 51, 51); font-family: 微软雅黑; line-height: 30px;">二、新增的HTML5标签</strong><br style="color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        <span style="color: rgb(255, 140, 0);">a，新增的HTML5标签-结构标签</span></p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        结构标签：(块状元素) 有意义的div<br>
+        &lt;article&gt;&nbsp; 标记定义一篇文章<br>
+        &lt;header&gt;&nbsp; 标记定义一个页面或一个区域的头部<br>
+        &lt;nav&gt; &nbsp;&nbsp;标记定义导航链接<br>
+        &lt;section&gt;&nbsp; 标记定义一个区域<br>
+        &lt;aside&gt; &nbsp;标记定义页面内容部分的侧边栏<br>
+        &lt;hgroup&gt;&nbsp; 标记定义文件中一个区块的相关信息<br>
+        &lt;figure&gt; &nbsp;标记定义一组媒体内容以及它们的标题&nbsp;<br>
+        &lt;figcaption&gt;&nbsp; 标签定义 figure 元素的标题。<br>
+        &lt;footer&gt; &nbsp;标记定义一个页面或一个区域的底部<br>
+        &lt;dialog&gt;&nbsp; 标记定义一个对话框(会话框)类似微信</p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        新的结构标签带来的是网页布局的改变及提升对搜索引擎的友好。<br>
+        &nbsp;</p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        <span style="color: rgb(255, 140, 0);">b，新增的HTML5标签-多媒体标签</span></p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        &lt;video&gt; 标记定义一个视频<br>
+        &lt;audio&gt; 标记定义音频内容<br>
+        &lt;source&gt; 标记定义媒体资源<br>
+        &lt;canvas&gt; 标记定义图片<br>
+        &lt;embed&gt; 标记定义外部的可交互的内容或插件 比如flash</p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        HTML5的多媒体标签的出现意味着富媒体的发展以及支持不使用插件的情况下即可操作媒体文件，极大地提升了用户体验。<br>
+        &nbsp;</p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        <span style="color: rgb(255, 140, 0);">c，新增的HTML5标签-Web应用标签</span></p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        Web应用标签<br>
+        &lt;menu&gt;命令列表<br>
+        &lt;menuitem&gt;menu命令列表标签 FF（嵌入系统）<br>
+        &lt;command&gt; menu标记定义一个命令按钮<br>
+        &lt;meter&gt;状态标签(实时状态显示:气压、气温)C、O<br>
+        &lt;progress&gt;状态标签 (任务过程:安装、加载) C、F、O<br>
+        &lt;datalist&gt; 为input标记定义一个下拉列表,配合option F、O<br>
+        &lt;details&gt; 标记定义一个元素的详细内容 ，配合dt、dd C<br>
+        &nbsp;</p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        <span style="color: rgb(255, 140, 0);">d，新增的HTML5标签-其他标签</span></p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        注释标签</p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        &lt;ruby&gt; 标记定义 注释或音标<br>
+        &lt;rp&gt; 告诉那些不支持 Ruby元素的浏览器如何去显示<br>
+        &lt;rt&gt; 标记定义对ruby的注释内容文本</p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        其他标签</p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        &lt;keygen&gt; 标记定义表单里一个生成的键值(加密信息传送)O、F<br>
+        &lt;mark&gt; 标记定义有标记的文本 (黄色选中状态)<br>
+        &lt;output&gt; 标记定义一些输出类型,计算表单结果配合oninput事件</p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        &lt;time&gt; 标记定义一个日期/时间 目前所有主流浏览器都不支持<br>
+        &nbsp;</p>
+    <strong style="font-size: 16px; color: rgb(51, 51, 51); font-family: 微软雅黑; line-height: 30px;">三、删除的HTML标签</strong><br style="color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        纯表现的元素：<br>
+        basefont，big，center，font, s，strike，tt，u；</p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        对可用性产生负面影响的元素：<br>
+        frame，frameset，noframes；</p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        产生混淆的元素：<br>
+        acronym ，applet，isindex，dir。<br>
+        &nbsp;</p>
+    <strong style="font-size: 16px; color: rgb(51, 51, 51); font-family: 微软雅黑; line-height: 30px;">四、重新定义的HTML标签</strong><br style="color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        HTML元素 HTML5中的意义<br>
+        &lt;b&gt; 代表内联文本，通常是粗体，没有传递表示重要的意思<br>
+        &lt;i&gt; 代表内联文本，通常是斜体，没有传递表示重要的意思<br>
+        &lt;dd&gt; 可以同details与figure一同使用，定义包含文本，dialog也可用<br>
+        &lt;dt&gt; 可以同details与figure一同使用，汇总细节，dialog也可用<br>
+        &lt;hr&gt; 表示主题结束，而不是水平线，虽然显示相同<br>
+        &lt;menu&gt; 重新定义用户界面的菜单，配合commond或者menuitem使用<br>
+        &lt;small&gt; 表示小字体，例如打印注释或者法律条款<br>
+        &lt;strong&gt; 表示重要性而不是强调符号<br>
+        &nbsp;</p>
+    <strong style="font-size: 16px; color: rgb(51, 51, 51); font-family: 微软雅黑; line-height: 30px;">五、崭新新的页面布局</strong><br style="color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        传统的：<br>
+        <img alt="HTML5标签布局及常用标签意义-【html5模板网】" src="http://www.html5code.net/uploads/allimg/150908/2339361026-0.jpg" style="width: 489px; height: 379px;"><br>
+        &nbsp;</p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        HTML5：<br>
+        <img alt="HTML5标签布局及常用标签意义-【html5模板网】" src="http://www.html5code.net/uploads/allimg/150908/23393A500-1.jpg" style="width: 490px; height: 382px;"><br>
+        &nbsp;</p>
+    <p style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 16px; line-height: 30px;">
+        <span style="color: rgb(255, 0, 0);">Div和新结构标签的区别和意义</span><br>
+        <img alt="HTML5标签布局及常用标签意义-【html5模板网】" src="http://www.html5code.net/uploads/allimg/150908/23393B250-2.jpg" style="width: 539px; height: 331px;"></p>
+
+    <p class="p_right">转载请注明：html5模板网（最专业的html5模板定制开发资源站）</p>
+</div>
+</body>
+</html>

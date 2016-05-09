@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html5新的布局标签</title>
+</head>
+<body>
+<div class="entry-content">
+    <p>结构之美：主要是<a title="开始学习和记录html5" href="http://www.reake.com/start-learning-and-record-html5/">HTML5</a>新增了一些新的布局元素（header、section、article、nav、aside、footer、hgroup、figure、menu），用来标识页面结构，使得html更语义化。下面我们就来看看<a title="开始学习和记录html5" href="http://www.reake.com/start-learning-and-record-html5/">HTML5</a>中新增的一些关键的结构性标记。</p>
+    <h2><strong>header标签</strong></h2>
+    <p>手册释义：定义 section 或 document 的页头。<br>
+        使用指引：一般用来包含页面头部，也可用于其他区域头部，比如article头部：</p>
+<pre>&lt;header&gt;
+	&lt;hgroup&gt;
+		&lt;h1&gt;瑞克互动博客&lt;/h1&gt;
+		&lt;h1&gt;关注前端开发,CSS hack,HTML3CSS3,网页设计,游戏等新动态&lt;/h1&gt;
+	&lt;/hgroup&gt;
+&lt;/header&gt;</pre>
+    <h2><strong>section标签</strong></h2>
+    <p>手册释义：定义文档中的节(section)。比如章节、页眉、页脚或文档中的其他部分。<br>
+        使用指引：用于成节的内容，会在文档流中开始一个新的节：</p>
+<pre>&lt;section&gt;
+	&lt;h1&gt;section是什么？&lt;/h1&gt;
+	&lt;h2&gt;一个新的章节&lt;/h2&gt;
+	&lt;article&gt;
+		&lt;h2&gt;关于section&lt;/h1&gt;
+		&lt;p&gt;section的介绍&lt;/p&gt;
+		…
+	&lt;/article&gt;
+&lt;/section&gt;</pre>
+    <h2><strong>article标签</strong></h2>
+    <p>手册释义：定义外部的内容。比如来自一个外部的新闻提供者的一篇新的文章，或者来自 blog 的文本，或者是来自论坛的文<br>
+        本。亦或是来自其他外部源内容。<br>
+        使用指引：顾名思义，一般用于文章区块：</p>
+<pre>&lt;article&gt;
+	&lt;header&gt;
+		&lt;hgroup&gt;
+			&lt;h1&gt;这是一篇介绍HTML 5结构标签的文章&lt;/h1&gt;
+			&lt;h2&gt;HTML 5的结构之美&lt;/h2&gt;
+		&lt;/hgroup&gt;
+		&lt;time datetime=”2011-12-30″&gt;2011.12.30&lt;/time&gt;
+	&lt;/header&gt;
+	&lt;p&gt;文章内容详情&lt;/p&gt;
+&lt;/article&gt;</pre>
+    <h2><strong>nav标签</strong></h2>
+    <p>手册释义：定义导航链接的部分。<br>
+        使用指引：用于定义页面的导航部分：</p>
+<pre>&lt;nav&gt;
+	&lt;ul&gt;
+		&lt;li&gt;HTML 5&lt;/li&gt;
+		&lt;li&gt;CSS&lt;/li&gt;
+		&lt;li&gt;JavaScript&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;</pre>
+    <p>&nbsp;</p>
+    <h2><strong>aside标签</strong></h2>
+    <p>定义 article 以外的内容。aside 的内容应该与 article 的内容相关。<br>
+        使用指引：用于成节的内容，会在文档流中开始一个新的节，一般用于与文章内容相关的边栏：</p>
+<pre>&lt;aside&gt;
+	&lt;h1&gt;瑞克简介&lt;/h1&gt;
+	&lt;p&gt;瑞克互动博客,关注前端开发,CSS hack,HTML3CSS3,网页设计,游戏等新动态&lt;/p&gt;
+&lt;/aside&gt;</pre>
+    <h2><strong>footer标签</strong></h2>
+    <p>手册释义：定义 section 或 document 的页脚。典型地，它会包含创作者的姓名、文档的创作日期以及/或者联系信息。<br>
+        使用指引：一般用来包裹整个页面通用底部，也可用于其他区域底部，比如article底部：</p>
+<pre>&lt;footer&gt;
+	COPYRIGHT@reake.com
+&lt;/footer&gt;</pre>
+    <h2><strong>hgroup标签</strong></h2>
+    <p>手册释义：用于对网页或区段(section)的标题进行组合。<br>
+        使用指引：用于标题类的组合，比如文章的标题与副标题：</p>
+<pre>&lt;hgroup&gt;
+	&lt;h1&gt;这是一篇介绍HTML 5结构标签的文章&lt;/h1&gt;
+	&lt;h2&gt;HTML5的结构之美&lt;/h2&gt;
+&lt;/hgroup&gt;</pre>
+    <h2><strong>figure标签</strong></h2>
+    <p>手册释义：用于对元素进行组合。<br>
+        使用指引：多用于图片与图片描述组合：</p>
+<pre>&lt;figure&gt;
+	&lt;img src=”img.gif” alt=”figure标签”  title=”figure标签” /&gt;
+	&lt;figcaption&gt;这儿是图片的描述信息&lt;/figcaption&gt;
+&lt;/figure&gt;</pre>
+    <h2><strong>menu标签</strong></h2>
+    <p>手册释义：定义菜单列表。当希望列出表单控件时使用该标签。<br>
+        使用指引：使用于菜单类区块，用来定义菜单列表或菜单选项:</p>
+<pre>&lt;menu&gt;
+	&lt;li&gt;HTML 5&lt;/li&gt;
+	&lt;li&gt;CSS&lt;/li&gt;
+	&lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/menu&gt;</pre>
+    <p><a title="开始学习和记录html5" href="http://www.reake.com/start-learning-and-record-html5/">HTML5</a>的其他新标签，请参考<a title="记录HTML5新增的标签和属性" href="http://www.reake.com/record-the-new-html5-tags-and-attributes/">记录HTML5新增的标签和属性</a>这篇文章，或请自行查询HTML5手册和HTML5标签/属性/事件及兼容性图文速查表。</p>
+</div><div class="entry-content">
+    <p>结构之美：主要是<a title="开始学习和记录html5" href="http://www.reake.com/start-learning-and-record-html5/">HTML5</a>新增了一些新的布局元素（header、section、article、nav、aside、footer、hgroup、figure、menu），用来标识页面结构，使得html更语义化。下面我们就来看看<a title="开始学习和记录html5" href="http://www.reake.com/start-learning-and-record-html5/">HTML5</a>中新增的一些关键的结构性标记。</p>
+    <h2><strong>header标签</strong></h2>
+    <p>手册释义：定义 section 或 document 的页头。<br>
+        使用指引：一般用来包含页面头部，也可用于其他区域头部，比如article头部：</p>
+<pre>&lt;header&gt;
+	&lt;hgroup&gt;
+		&lt;h1&gt;瑞克互动博客&lt;/h1&gt;
+		&lt;h1&gt;关注前端开发,CSS hack,HTML3CSS3,网页设计,游戏等新动态&lt;/h1&gt;
+	&lt;/hgroup&gt;
+&lt;/header&gt;</pre>
+    <h2><strong>section标签</strong></h2>
+    <p>手册释义：定义文档中的节(section)。比如章节、页眉、页脚或文档中的其他部分。<br>
+        使用指引：用于成节的内容，会在文档流中开始一个新的节：</p>
+<pre>&lt;section&gt;
+	&lt;h1&gt;section是什么？&lt;/h1&gt;
+	&lt;h2&gt;一个新的章节&lt;/h2&gt;
+	&lt;article&gt;
+		&lt;h2&gt;关于section&lt;/h1&gt;
+		&lt;p&gt;section的介绍&lt;/p&gt;
+		…
+	&lt;/article&gt;
+&lt;/section&gt;</pre>
+    <h2><strong>article标签</strong></h2>
+    <p>手册释义：定义外部的内容。比如来自一个外部的新闻提供者的一篇新的文章，或者来自 blog 的文本，或者是来自论坛的文<br>
+        本。亦或是来自其他外部源内容。<br>
+        使用指引：顾名思义，一般用于文章区块：</p>
+<pre>&lt;article&gt;
+	&lt;header&gt;
+		&lt;hgroup&gt;
+			&lt;h1&gt;这是一篇介绍HTML 5结构标签的文章&lt;/h1&gt;
+			&lt;h2&gt;HTML 5的结构之美&lt;/h2&gt;
+		&lt;/hgroup&gt;
+		&lt;time datetime=”2011-12-30″&gt;2011.12.30&lt;/time&gt;
+	&lt;/header&gt;
+	&lt;p&gt;文章内容详情&lt;/p&gt;
+&lt;/article&gt;</pre>
+    <h2><strong>nav标签</strong></h2>
+    <p>手册释义：定义导航链接的部分。<br>
+        使用指引：用于定义页面的导航部分：</p>
+<pre>&lt;nav&gt;
+	&lt;ul&gt;
+		&lt;li&gt;HTML 5&lt;/li&gt;
+		&lt;li&gt;CSS&lt;/li&gt;
+		&lt;li&gt;JavaScript&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;</pre>
+    <p>&nbsp;</p>
+    <h2><strong>aside标签</strong></h2>
+    <p>定义 article 以外的内容。aside 的内容应该与 article 的内容相关。<br>
+        使用指引：用于成节的内容，会在文档流中开始一个新的节，一般用于与文章内容相关的边栏：</p>
+<pre>&lt;aside&gt;
+	&lt;h1&gt;瑞克简介&lt;/h1&gt;
+	&lt;p&gt;瑞克互动博客,关注前端开发,CSS hack,HTML3CSS3,网页设计,游戏等新动态&lt;/p&gt;
+&lt;/aside&gt;</pre>
+    <h2><strong>footer标签</strong></h2>
+    <p>手册释义：定义 section 或 document 的页脚。典型地，它会包含创作者的姓名、文档的创作日期以及/或者联系信息。<br>
+        使用指引：一般用来包裹整个页面通用底部，也可用于其他区域底部，比如article底部：</p>
+<pre>&lt;footer&gt;
+	COPYRIGHT@reake.com
+&lt;/footer&gt;</pre>
+    <h2><strong>hgroup标签</strong></h2>
+    <p>手册释义：用于对网页或区段(section)的标题进行组合。<br>
+        使用指引：用于标题类的组合，比如文章的标题与副标题：</p>
+<pre>&lt;hgroup&gt;
+	&lt;h1&gt;这是一篇介绍HTML 5结构标签的文章&lt;/h1&gt;
+	&lt;h2&gt;HTML5的结构之美&lt;/h2&gt;
+&lt;/hgroup&gt;</pre>
+    <h2><strong>figure标签</strong></h2>
+    <p>手册释义：用于对元素进行组合。<br>
+        使用指引：多用于图片与图片描述组合：</p>
+<pre>&lt;figure&gt;
+	&lt;img src=”img.gif” alt=”figure标签”  title=”figure标签” /&gt;
+	&lt;figcaption&gt;这儿是图片的描述信息&lt;/figcaption&gt;
+&lt;/figure&gt;</pre>
+    <h2><strong>menu标签</strong></h2>
+    <p>手册释义：定义菜单列表。当希望列出表单控件时使用该标签。<br>
+        使用指引：使用于菜单类区块，用来定义菜单列表或菜单选项:</p>
+<pre>&lt;menu&gt;
+	&lt;li&gt;HTML 5&lt;/li&gt;
+	&lt;li&gt;CSS&lt;/li&gt;
+	&lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/menu&gt;</pre>
+    <p><a title="开始学习和记录html5" href="http://www.reake.com/start-learning-and-record-html5/">HTML5</a>的其他新标签，请参考<a title="记录HTML5新增的标签和属性" href="http://www.reake.com/record-the-new-html5-tags-and-attributes/">记录HTML5新增的标签和属性</a>这篇文章，或请自行查询HTML5手册和HTML5标签/属性/事件及兼容性图文速查表。</p>
+</div>
+</body>
+</html>
