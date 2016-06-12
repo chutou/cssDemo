@@ -11,6 +11,43 @@ files: /js/demo.js,/css/demo.css
 
 [slide]
 
+# 简介
+
+[slide]
+
+## CSS(Cascading Style Sheets) 层叠样式表
+----
+* CSS目前最新版本为CSS3，是能够真正做到网页表现与内容分离的一种样式设计语言。相对于传统HTML的表现而言，CSS能够对网页中的对象的位置排版进行像素级的精确控制，支持几乎所有的字体字号样式，拥有对网页对象和模型样式编辑的能力，并能够进行初步交互设计，是目前基于文本展示最优秀的表现设计语言。CSS能够根据不同使用者的理解能力，简化或者优化写法，针对各类人群，有较强的易读性 {:&.rollIn}
+
+
+[slide]
+
+## 引入方法
+----
+* 外联式 {:&.rollIn}
+<pre>
+    <code>
+        <link rel="stylesheet" href="styles/main.css">
+    </code>
+</pre>
+* 嵌入式 
+<pre>
+    <code>
+    <style type='text/css'>
+        * {
+            padding: 0;
+        }
+    </style>
+    </code>
+</pre>
+* 内联式 
+<pre>
+        <p style="padding: 10px;">123456</p>
+</pre>
+* 优先级：内联式 > 嵌入式 > 外联式
+
+[slide]
+
 # 基本属性
 
 [slide]
@@ -175,6 +212,89 @@ files: /js/demo.js,/css/demo.css
 
 [slide]
 
+# 选择符
+
+[slide]
+
+# 元素选择符
+---
+* 通配选择符: *{}  {:&.rollIn}
+* 类型选择符: h1{}
+* id选择符: #id{}
+* 类选择符: .class{}
+
+[slide]
+
+# 关系选择符
+---
+* 包含选择符: E F { sRules}  {:&.rollIn}
+<pre>
+    <code>
+        .demo div { border: 1px solid #fff;}
+    </code>
+</pre>
+* 子选择符: E > F { sRules }
+<pre>
+    <code>
+        .demo > div { border: 1px solid #fff; }
+    </code>
+</pre>
+* 相邻选择符:  E+F { }
+<pre>
+    <code>
+        p+p { color: red;}
+    </code>
+</pre>
+* 兄弟选择符 E~F { sRules }
+<pre>
+    <code>
+        .p~p { font-size: 36px;}
+    </code>
+</pre>
+
+[slide]
+
+# 属性选择符
+---
+* E[attr]: 选择具有att属性的E元素  {:&.rollIn}
+<pre>
+    <code>
+        img[alt] { margin: 10px; }
+    </code>
+</pre>
+* E[att="val"]： 选择具有att属性且属性值等于val的E元素。
+<pre>
+    <code>
+        . input[type="text"]{ border: 1px solid #fff; }
+    </code>
+</pre>
+* E[att~="val"]: 选择具有att属性（包含只有一个值且该值等于val的情况）
+* E[att*="val"]：选择具有att属性且属性值为包含val的字符串的E元素
+* E[att$="val"]：选择具有att属性且属性值为以val结尾的字符串的E元素
+
+[slide]
+
+# 伪类选择符
+---
+* E:link  {:&.rollIn}
+* E:visited
+* E:hover
+* E:active
+* E:focus
+
+[slide]
+
+# 伪对象选择符
+---
+* E:before 设置在对象前（依据对象树的逻辑结构）发生的内容。用来和content属性一起使用  {:&.rollIn}
+* E:after 设置在对象后（依据对象树的逻辑结构）发生的内容。用来和content属性一起使用
+* E::placeholder 设置对象文字占位符的样式
+* E:first-letter 设置对象内的第一个字符的样式
+* E:first-line 设置对象内的第一行的样式
+* E::selection 设置对象被选择时的颜色
+
+[slide]
+
 # 布局
 
 [slide]
@@ -234,32 +354,306 @@ files: /js/demo.js,/css/demo.css
 * fixed：与absolute一致，但偏移定位是以窗口为参考。当出现滚动条时，对象不会随着滚动
 
 [slide]
+---
+<pre>
+    <code>
+    <style>
+        .relative1 {
+          position: relative;
+          border: 2px solid red;
+        }
+        .relative2 {
+          position: relative;
+          top: -20px;
+          left: 20px;
+          background-color: white;
+          width: 500px;
+          border: 2px solid green;
+        }
+    </style>
+    <div class="relative1">
+        relative 表现的和 static 一样，除非你添加了一些额外的属性。
+    </div>
+    <div class="relative2">
+        在一个相对定位（position属性的值为relative）的元素上设置 top 、 right 、 bottom 和 left 属性会使其偏离其正常位置。其他的元素则不会调整位置来弥补它偏离后剩下的空隙。
+    </div>
+    </code>
+
+</pre>
+
+[slide]
 ## Z-index: 检索或设置对象的层叠顺序
 
+[slide]
+## float: 浮动
+---
+* clear: 清除浮动
+<pre>
+    <code>
+        <style>
+            nav {
+              float: left;
+              width: 200px;
+            }
+            section {
+              margin-left: 200px;
+            }
+            .clearfix:after{
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+        </style>
+        <div class="clearfix">
+            <nav>
+            <ul>
+              <li>
+                <a href="float-layout.html">Home</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Taco Menu</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Draft List</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Hours</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Directions</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Contact</a>
+              </li>
+            </ul>
+            </nav>
+            <section class="elem elem-green">
+                <p>
+                  这个例子和之前那个外观一模一样。请注意我们在容器上做了“清除浮动”。原本在这个例子中是不需要的，但是当 <code>nav</code> 比非浮动的内容还要高时就需要了。
+                </p>
+            </section>
+            <section class="elem elem-green ipsum">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+                </p>
+            </section>
+        </div>
+    </code>
+</pre>
+
+[slide]
+## 百分比布局
+---
+<pre>
+    <code>
+        <style>
+            nav {
+              float: left;
+              width: 25%;
+            }
+            section {
+              margin-left: 25%;
+            }
+            .clearfix:after{
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+        </style>
+        <div class="clearfix">
+            <nav>
+            <ul>
+              <li>
+                <a href="float-layout.html">Home</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Taco Menu</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Draft List</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Hours</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Directions</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Contact</a>
+              </li>
+            </ul>
+            </nav>
+            <section class="elem elem-green">
+                <p>
+                  这个例子和之前那个外观一模一样。请注意我们在容器上做了“清除浮动”。原本在这个例子中是不需要的，但是当 <code>nav</code> 比非浮动的内容还要高时就需要了。
+                </p>
+            </section>
+            <section class="elem elem-green ipsum">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+                </p>
+            </section>
+        </div>
+    </code>
+</pre>
+
+[slide]
+## inline-block 布局
+---
+* vertical-align 属性会影响到 inline-block 元素，你可能会把它的值设置为 top 。
+* 你需要设置每一列的宽度
+* 如果HTML源代码中元素之间有空格，那么列与列之间会产生空隙
 
 [slide]
 
-# 封面样式2 {:&.flexbox.vleft}
-## 左对齐
-
-[slide style="background-image:url('/img/bg1.png')"]
-
-## 使用背景
+## column 多列布局
+---
+<pre>
+    <code>
+        <style>
+            .three-column {
+              padding: 1em;
+              -moz-column-count: 3;
+              -moz-column-gap: 1em;
+              -webkit-column-count: 3;
+              -webkit-column-gap: 1em;
+              column-count: 3;
+              column-gap: 1em;
+            }
+        </style>
+        <section class="elem three-column ipsum">
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+            </div>
+        </section>
+    </code>
+</pre>
 
 [slide]
-## 使用.class/#id/自定义属性样式
-----
 
-```javascript
-alert('nodeppt');
-```
+## flexbox 弹性布局
+---
+<pre>
+    <code>
+        <style>
+            .container {
+              display: -webkit-flex;
+              display: flex;
+            }
+            nav {
+              width: 200px;
+            }
+            .flex-column {
+              -webkit-flex: 1;
+                      flex: 1;
+            }
+        </style>
+        <div class="container">
+            <nav>
+            <ul>
+              <li>
+                <a href="float-layout.html">Home</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Taco Menu</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Draft List</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Hours</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Directions</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Contact</a>
+              </li>
+            </ul>
+            </nav>
+            <div class="flex-column">
+                <section class="elem elem-green">
+                    <p>
+                      这个例子和之前那个外观一模一样。请注意我们在容器上做了“清除浮动”。原本在这个例子中是不需要的，但是当 <code>nav</code> 比非浮动的内容还要高时就需要了。
+                    </p>
+                </section>
+                <section class="elem elem-green ipsum">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </code>
+</pre>
 
 [slide]
+## @media 媒体查询
+---
+<pre>
+    <code>
+        <style>
+            nav {
+              display: inline-block;
+              vertical-align: top;
+              width: 25%;
+            }
+            .column {
+              display: inline-block;
+              vertical-align: top;
+              width: 75%;
+            }
+            section {
 
-## 主页面样式
-### ----是上下分界线
-----
-
-nodeppt是基于nodejs写的支持 **Markdown!** 语法的网页PPT，当前版本：1.4.2
-
-Github：https://github.com/ksky521/nodePPT
+            }
+            .clearfix:after{
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+            
+        </style>
+        <div class="clearfix">
+            <nav>
+            <ul>
+              <li>
+                <a href="float-layout.html">Home</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Taco Menu</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Draft List</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Hours</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Directions</a>
+              </li>
+              <li>
+                <a href="float-layout.html">Contact</a>
+              </li>
+            </ul>
+            </nav>
+            <div class="column">
+                <section class="elem elem-green">
+                    <p>
+                      这个例子和之前那个外观一模一样。请注意我们在容器上做了“清除浮动”。原本在这个例子中是不需要的，但是当 <code>nav</code> 比非浮动的内容还要高时就需要了。
+                    </p>
+                </section>
+                <section class="elem elem-green ipsum">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    </p>
+                </section>
+            </div>
+        </div>
+    </code>
+</pre>
