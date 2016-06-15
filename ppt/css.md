@@ -169,7 +169,8 @@ files: /js/demo.js,/css/demo.css
 * line-height: 对象的行高
 <pre>
     <code>
-        pre{ white-space: pre-wrap!important;    /*保留空白，进行换行*/
+        pre{ 
+            white-space: pre-wrap!important;    /*保留空白，进行换行*/
             word-wrap: break-word!important;    /*连续字符换行*/
             /*white-space:normal!important;*/    /*忽略空白，进行换行*/
         }
@@ -406,7 +407,7 @@ files: /js/demo.js,/css/demo.css
                 visibility: hidden;
             }
         </style>
-        <div class="clearfix">
+        <!--<div class="clearfix">
             <nav>
             <ul>
               <li>
@@ -439,7 +440,7 @@ files: /js/demo.js,/css/demo.css
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
                 </p>
             </section>
-        </div>
+        </div>-->
     </code>
 </pre>
 
@@ -464,7 +465,7 @@ files: /js/demo.js,/css/demo.css
                 visibility: hidden;
             }
         </style>
-        <div class="clearfix">
+        <!--<div class="clearfix">
             <nav>
             <ul>
               <li>
@@ -497,7 +498,7 @@ files: /js/demo.js,/css/demo.css
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
                 </p>
             </section>
-        </div>
+        </div>-->
     </code>
 </pre>
 
@@ -525,11 +526,11 @@ files: /js/demo.js,/css/demo.css
               column-gap: 1em;
             }
         </style>
-        <section class="elem three-column ipsum">
+        <!--<section class="elem three-column ipsum">
             <div>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
             </div>
-        </section>
+        </section>-->
     </code>
 </pre>
 
@@ -552,7 +553,7 @@ files: /js/demo.js,/css/demo.css
                       flex: 1;
             }
         </style>
-        <div class="container">
+        <!--<div class="container">
             <nav>
             <ul>
               <li>
@@ -587,7 +588,7 @@ files: /js/demo.js,/css/demo.css
                     </p>
                 </section>
             </div>
-        </div>
+        </div>-->
     </code>
 </pre>
 
@@ -619,7 +620,7 @@ files: /js/demo.js,/css/demo.css
             }
             
         </style>
-        <div class="clearfix">
+        <!--<div class="clearfix">
             <nav>
             <ul>
               <li>
@@ -654,6 +655,6 @@ files: /js/demo.js,/css/demo.css
                     </p>
                 </section>
             </div>
-        </div>
+        </div>-->
     </code>
 </pre>
