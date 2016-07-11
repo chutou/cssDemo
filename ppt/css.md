@@ -25,25 +25,21 @@ files: /js/demo.js,/css/demo.css
 ## 引入方法
 ----
 * 外联式 {:&.rollIn}
-<pre>
-    <code>
-        <link rel="stylesheet" href="styles/main.css">
-    </code>
-</pre>
+```
+<link rel="stylesheet" href="styles/main.css">
+```
 * 嵌入式 
-<pre>
-    <code>
+```
     <style type='text/css'>
         * {
             padding: 0;
         }
     </style>
-    </code>
-</pre>
+```
 * 内联式 
-<pre>
+```
         <p style="padding: 10px;">123456</p>
-</pre>
+```
 * 优先级：内联式 > 嵌入式 > 外联式
 
 [slide]
@@ -128,23 +124,19 @@ files: /js/demo.js,/css/demo.css
 * font-weight: 对象中的文本字体的粗细
 * font-size: 对象中的字体尺寸
 * font-family: 对象中文本的字体名称序列
-<pre>
-    <code>
+```
         .font1 p{font:18px Simsun,arial,sans-serif;}
         .font2 p{font:italic 18px Simsun,arial,sans-serif;}
         .font3 p{font:italic small-caps 18px Simsun,arial,sans-serif;}
         .font4 p{font:italic small-caps bold 18px Simsun,arial,sans-serif;}
         .font5 p{font:italic small-caps bold 18px/2 Simsun,arial,sans-serif;}
-    </code>
-</pre>
+```
 
 [slide]
 ## 自定义字体
 ---
 * @font-face:
-
-<pre>
-    <code>
+```
         @font-face {
             font-family: 'diyfont';
             src: url('diyfont.eot'); /* IE9+ */
@@ -152,9 +144,7 @@ files: /js/demo.js,/css/demo.css
                   url('diyfont.woff') format('woff'), /* chrome、firefox */
                               url('diyfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
                   url('diyfont.svg#fontname') format('svg'); /* iOS 4.1- */
-        }
-    </code>
-</pre>
+```
 
 [slide]
 ## 文本
@@ -167,42 +157,36 @@ files: /js/demo.js,/css/demo.css
 * text-indent: 检索或设置对象中的文本的缩进
 * vertical-align: 对象内容的垂直对其方式
 * line-height: 对象的行高
-<pre>
-    <code>
+```
         pre{ 
             white-space: pre-wrap!important;    /*保留空白，进行换行*/
             word-wrap: break-word!important;    /*连续字符换行*/
             /*white-space:normal!important;*/    /*忽略空白，进行换行*/
         }
-    </code>
-</pre>
+```
 
 [slide]
 ## 文本装饰
 ----
 * text-decoration: 检索或设置对象中的文本的装饰 {:&.rollIn}
 * text-shadow: 设置或检索对象中文本的文字是否有阴影及模糊效果
-<pre>
-    <code>
+```
         a{
             text-decoration: none;
         }
-    </code>
-</pre>
+```
 
 [slide]
 ## 内容
 ----
 * content: 用来和:after及:before伪元素一起使用，在对象前或后显示 {:&.rollIn}
 * quotes: 设置或检索对象内使用的嵌套标记
-<pre>
-    <code>
+```
         .string p:after{margin-left:-16px;background:#fff;content:"是";color:#f00;}
-    </code>
     <div class="string">
         <p></p>
     </div>
-</pre>
+```
 
 [slide]
 ## 表格
@@ -229,40 +213,30 @@ files: /js/demo.js,/css/demo.css
 # 关系选择符
 ---
 * 包含选择符: E F { sRules}  {:&.rollIn}
-<pre>
-    <code>
+```
         .demo div { border: 1px solid #fff;}
-    </code>
-</pre>
+```
 * 子选择符: E > F { sRules }
-<pre>
-    <code>
+```
         .demo > div { border: 1px solid #fff; }
-    </code>
-</pre>
+```
 * 相邻选择符:  E+F { }
-<pre>
-    <code>
+```
         p+p { color: red;}
-    </code>
-</pre>
+```
 * 兄弟选择符 E~F { sRules }
-<pre>
-    <code>
+```
         .p~p { font-size: 36px;}
-    </code>
-</pre>
+```
 
 [slide]
 
 # 属性选择符
 ---
 * E[attr]: 选择具有att属性的E元素  {:&.rollIn}
-<pre>
-    <code>
+```
         img[alt] { margin: 10px; }
-    </code>
-</pre>
+```
 * E[att="val"]： 选择具有att属性且属性值等于val的E元素。
 <pre>
     <code>
@@ -309,8 +283,7 @@ files: /js/demo.js,/css/demo.css
 [slide]
 ## display
 ---
-<pre>
-    <code>
+```
         display: none;
         display: inline;
         display: block;
@@ -343,8 +316,7 @@ files: /js/demo.js,/css/demo.css
         display: inherit;
         display: initial;
         display: unset;
-    </code>
-</pre>
+```
 
 [slide]
 ## Position 定位方式
@@ -356,8 +328,7 @@ files: /js/demo.js,/css/demo.css
 
 [slide]
 ---
-<pre>
-    <code>
+```
     <style>
         .relative1 {
           position: relative;
@@ -378,9 +349,7 @@ files: /js/demo.js,/css/demo.css
     <div class="relative2">
         在一个相对定位（position属性的值为relative）的元素上设置 top 、 right 、 bottom 和 left 属性会使其偏离其正常位置。其他的元素则不会调整位置来弥补它偏离后剩下的空隙。
     </div>
-    </code>
-
-</pre>
+```
 
 [slide]
 ## Z-index: 检索或设置对象的层叠顺序
@@ -389,8 +358,7 @@ files: /js/demo.js,/css/demo.css
 ## float: 浮动
 ---
 * clear: 清除浮动
-<pre>
-    <code>
+```
         <style>
             nav {
               float: left;
@@ -441,14 +409,12 @@ files: /js/demo.js,/css/demo.css
                 </p>
             </section>
         </div>-->
-    </code>
-</pre>
+```
 
 [slide]
 ## 百分比布局
 ---
-<pre>
-    <code>
+```
         <style>
             nav {
               float: left;
@@ -499,8 +465,7 @@ files: /js/demo.js,/css/demo.css
                 </p>
             </section>
         </div>-->
-    </code>
-</pre>
+```
 
 [slide]
 ## inline-block 布局
@@ -513,8 +478,7 @@ files: /js/demo.js,/css/demo.css
 
 ## column 多列布局
 ---
-<pre>
-    <code>
+```
         <style>
             .three-column {
               padding: 1em;
@@ -531,15 +495,13 @@ files: /js/demo.js,/css/demo.css
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
             </div>
         </section>-->
-    </code>
-</pre>
+```
 
 [slide]
 
 ## flexbox 弹性布局
 ---
-<pre>
-    <code>
+```
         <style>
             .container {
               display: -webkit-flex;
@@ -589,14 +551,12 @@ files: /js/demo.js,/css/demo.css
                 </section>
             </div>
         </div>-->
-    </code>
-</pre>
+```
 
 [slide]
 ## @media 媒体查询
 ---
-<pre>
-    <code>
+```
         <style>
             nav {
               display: inline-block;
@@ -656,5 +616,4 @@ files: /js/demo.js,/css/demo.css
                 </section>
             </div>
         </div>-->
-    </code>
-</pre>
+```
