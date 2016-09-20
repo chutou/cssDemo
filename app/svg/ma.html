@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>ma</title>
+    <link href="../styles/main.css">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">
+        <g>
+            <text font-family="microsoft yahei" font-size="120" y="160" x="160">马</text>
+            <animateTransform attributeName="transform" begin="0s" dur="10s" type="rotate" from="0 160 160" to="360 160 160" repeatCount="indefinite" />
+        </g>
+    </svg>
+    <h4>set 的用法: 可以在特定时间之后修改某个属性值</h4>
+    <svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">
+        <g>
+            <text font-family="microsoft yahei" font-size="120" y="160" x="160">
+                马
+                <set attributeName="x" attributeType="XML" to="60" begin="3s" />
+            </text>
+        </g>
+    </svg>
+    <h4>animate 的用法: </h4>
+    <svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">
+        <g>
+            <text font-family="microsoft yahei" font-size="120" y="160" x="160">
+                马
+                <animate attributeName="x" values="0;160;0" begin="0s" dur="3s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="1;0;1" dur="3s" fill="freeze" repeatCount="indefinite" />
+            </text>
+        </g>
+    </svg>
+    <h4>animateTransform 的用法</h4>
+    <svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">
+        <g>
+            <text font-family="microsoft yahei" font-size="80" y="100" x="100">马</text>
+            <animateTransform attributeName="transform" begin="0s" dur="3s" type="scale" from="1" to="1.5" repeatCount="indefinite" />
+        </g>
+    </svg>
+    <h4>animateMotion 的用法</h4>
+    <svg width="360" height="200" xmlns="http://www.w3.org/2000/svg">
+        <text font-family="microsoft yahei" font-size="40" x="0" y="0" fill="#cd0000">马
+            <animateMotion path="M10,80 q100,120 120,20 q140,-50 160,0" begin="0s" dur="3s" rotate="auto" repeatCount="indefinite" />
+        </text>
+    </svg>
+    <h4>时间值</h4>
+    <svg width="320" height="200" xmlns="http://www.w3.org/2000/svg">
+		    <text font-family="microsoft yahei" font-size="120" y="160" x="160">马
+		        <animate id="x" attributeName="x" to="60" begin="0s" dur="3s" fill="freeze" repeatCount="indefinite" />
+		        <animate attributeName="y" to="100" begin="x.end" dur="3s" fill="freeze" repeatCount="indefinite" />
+		    </text>
+		</svg>
+		<h4>event-value</h4>
+		<svg id="svg" width="320" height="200" xmlns="http://www.w3.org/2000/svg">
+		    <circle id="circle" cx="100" cy="100" r="50"></circle>
+		    <text font-family="microsoft yahei" font-size="120" y="160" x="160">马
+		        <animate attributeName="x" to="60" begin="circle.click" dur="3s" />
+		    </text>
+		</svg>
+		<h4>repeat-value</h4>
+		<svg width="320" height="200" xmlns="http://www.w3.org/2000/svg">
+		    <text font-family="microsoft yahei" font-size="120" y="160" x="160">马
+		        <animate id="x" attributeName="x" to="60" begin="0s" dur="3s" repeatCount="indefinite" />
+		        <animate attributeName="y" to="100" begin="x.repeat(2)" dur="3s" fill="freeze" />
+		    </text>
+		</svg>
+		<h4>触发链接</h4>
+		<svg width="320" height="200" font-family="microsoft yahei" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	     <text font-size="120" y="160" x="160">马
+	          <animate id="animate" attributeName="x" to="60" begin="indefinite" dur="3s" repeatCount="indefinite" />
+	     </text>
+	     <a xlink:href="#animate">
+	          <text x="10" y="50" fill="#cd0000" font-size="30">点击我</text>
+	     </a>
+		</svg>
+		<h4>旋转放大</h4>
+		<img src="sz.svg" width="320" height="200" alt="旋转放大" />
+		<h4>自定义svg元素</h4>
+		<svg width="300" height="200">
+			<path d="M 50 50 L 100 50 L 100 100 L 50 100 z"
+        fill="orange" stroke="#ffff00" stroke-width="3" />
+      <path d="c 50,0 50,100 100,100 50,0 50,-100 100,-100" />
+      <path d="c 50,0 50,100 100,100 c 50,0 50,-100 100,-100" />
+		</svg>
+		<svg width="200" height="200" viewBox="0 0 100 100">
+ <rect x="0" y="0" width="200" height="200" fill="Red" />
+ <rect x="100" y="0" width="100" height="100" fill="Green" />
+</svg>
+
+<svg width="100" height="100">
+  <rect x="0" y="0" width="100" height="100" fill="green" />
+  <circle cx="15" cy="15" r="15" fill="red" />
+  <circle cx="15" cy="15" r="15" fill="yellow" transform="skewX(45)" />
+  <rect x="30" y="30" width="20" height="20"  />
+  <rect x="30" y="30" width="20" height="20" transform="skewX(45)"  />
+  <rect x="30" y="30" width="20" height="20" transform="skewY(45)"  />
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     version="1.1" width="5cm" height="5cm">
+  <desc>Two groups, each of two rectangles</desc>
+  <symbol id="group1" fill="red">
+    <rect x="1cm" y="1cm" width="1cm" height="1cm"/>
+    <rect x="3cm" y="1cm" width="1cm" height="1cm"/>
+  </symbol>
+  <g id="group2" fill="blue">
+    <rect x="1cm" y="3cm" width="1cm" height="1cm"/>
+    <rect x="3cm" y="3cm" width="1cm" height="1cm"/>
+  </g>
+  <use xlink:href="#group1" target="_blank" rel="nofollow">
+
+  <!-- Show outline of canvas using 'rect' element -->
+  <rect x=".02cm" y=".02cm" width="4.96cm" height="4.96cm"
+        fill="none" stroke="blue" stroke-width=".02cm"/>
+</svg>
+</body>
+
+</html>

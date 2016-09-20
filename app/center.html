@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>center</title>
+        <style>
+                body, html{
+                        position: relative;
+                        height: 100vh;
+                }
+                * {
+                        padding: 0;
+                        margin: 0;
+                }
+                .dialog {
+                        /*position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        background-color: #0A0B11;
+                        color: #fff;
+                        width: 300px;
+                        height: 200px;*/
+                        width: 50%;
+                        height: 200px;
+                        background-color: #000;
+                        color: #fff;
+                        margin: auto;
+                        position: absolute;
+                        top: 50%; left: 50%;
+                        -webkit-transform: translate(-50%,-50%);
+                        -ms-transform: translate(-50%,-50%);
+                        transform: translate(-50%,-50%);
+                        /*margin-top: -100px;
+                        margin-left: -150px;*/
+                        /*background-color: #0A0B11;
+                        margin: auto;
+                        position: absolute;
+                        top: 0; left: 0; bottom: 0; right: 0;*/
+
+                }
+                .dialog-table {
+                        display: table;
+                        vertical-align: middle;
+                        text-align: center;
+                        height: 100vh;
+                        width: 100%;
+                }
+                .dialog-table .cell {
+                        display: table-cell;
+                        width: 300px;
+                        height: 200px;
+                        background: #000;
+                }
+        </style>
+</head>
+<body>
+<!--居中-->
+<div class="dialog">
+        <span>内容</span>
+</div>
+<!--<div class="dialog-table">
+        <div class="cell">cell</div>
+</div>-->
+</body>
+</html>

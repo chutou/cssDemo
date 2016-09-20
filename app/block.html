@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>block</title>
+        <style>
+                * {
+                        padding: 0;
+                        margin: 0;
+                        box-sizing: border-box;
+                        color: #fff;
+                }
+                header {
+                        height: 20vh;
+                        background-color: #864fe1;
+                }
+                footer {
+                        height: 20vh;
+                        background-color: #33acfe;
+                }
+                article {
+                        height: 600vh;
+                        background-color: #0A0B11;
+                        position: relative;
+                }
+                div {
+                        /*display: inline-block;*/
+
+                }
+                div.center {
+                        width: 60%;
+                        height: 100%;
+                        background-color: #00A000;
+                        /*float: left;*/
+                        position: absolute;
+                        left: 0;
+                }
+                div.left {
+                        width: 20%;
+                        height: 100%;
+                        background-color: #6B4226;
+                        /*float: left;*/
+                        position: absolute;
+                        left: 60%;
+                }
+                div.right {
+                        width: 20%; 
+                        height: 100%;
+                        background-color: #0c63ee;
+                        /*float: right;*/
+                        position: absolute;
+                        right: 0;
+                }
+
+                .btm {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 10vh;
+                        background-color: #000;
+                }
+        </style>
+</head>
+<body>
+        <header>头部</header>
+        <article>
+                <div class="left">
+                        left
+                        <span>z-index</span>
+                </div><div class="right">right</div><div class="center three-column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</div>
+                <div class="btm">fixed</div>
+                <style>
+                        .three-column {
+                                padding: 1em;
+                                -moz-column-count: 3;
+                                -moz-column-gap: 1em;
+                                -webkit-column-count: 3;
+                                -webkit-column-gap: 1em;
+                                column-count: 3;
+                                column-gap: 1em;
+                        }
+                </style>
+                <section class="elem three-column ipsum">
+                    <div>
+
+                    </div>
+                </section>
+        </article>
+        <footer>底部</footer>
+</body>
+</html>

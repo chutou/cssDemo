@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>flex</title>
+        <style>
+                .flex-box {
+                        background: #ccc;
+                        height: 200px;
+                        border-radius: 20px;
+                        display: flex;
+                        /*align-items: center;
+                        justify-content: center;*/
+                        flex-direction: row;
+                }
+                .flex-box div{
+                        display: inline-block;
+                        background: #000;
+                        margin: 10px 10px;
+                        flex: 1;
+                }
+        </style>
+</head>
+<body>
+<div class="flex-box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>3</div>
+</div>
+</body>
+</html>
